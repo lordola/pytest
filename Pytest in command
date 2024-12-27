@@ -1,0 +1,25 @@
+1.To generate report - pip install pytest-html
+    pytest --html=report.html
+2. To run test in parallel - pip install pytest-xdist
+    pytest -n 3(number of times)
+
+3. To run only smoke tests - tag the test to run- @pytest.mark.smoke
+    pytest -m smoke
+
+4. To run test that has same part name( all name that has such attribute) - filter
+    pytest -k web_api
+
+5. To see logs and screenshot
+    pytest --tracing on
+
+6. To see logs and screenshot and html report
+    pytest --tracing on --html=report.html
+
+7. To set browser in command line after setting browser_name in pytest_addoption(parser)
+    pytest test_framework_web_api.py --browser_name firefox (it will take default if nothing is set)
+
+ 8. To set url in command line after setting browser_name in pytest_addoption(parser)
+    pytest test_framework_web_api.py --url_name "https//...."
+
+BDD Framework
+pip install pytest-bdd

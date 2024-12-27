@@ -3,7 +3,7 @@ import json
 import pytest
 from playwright.sync_api import Playwright
 from pageObjects.login import Login
-from utils.apiBase import APIUtils
+from utils.apiBaseFramework import APIUtils
 
 with open("data/credentials.json") as file:
     test_data = json.load(file)
